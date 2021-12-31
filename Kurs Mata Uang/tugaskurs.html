@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Mata Uang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div>
+            <h2>Kurs Mata Uang</h2>
+        </div>
+    </nav>
+    <div class="header">
+        <form action="">
+            <label for="nilai"><b>Masukkan Nilai</b></label>
+            <input type="text" id="n1" value="" autocomplete="off" required/>
+            <select name="kurs" id="v1">
+                <option value="" selected>Pilih Mata Uang</option>
+                <option value="9.915" href="Untitled1.png">Dollar US</option>
+                <option value="13.472">Dollar Singapore</option>
+                <option value="874">Ringgit Malaysia</option>
+                <option value="120">Yen Jepang</option>
+                <option value="15.888">Euro</option>
+                <option value="3.592">Riyal Arab Saudi</option>
+            </select>
+            <input type="text" id="rupiah" value="Nilai Rupiah" autocomplete="" disabled/>
+
+            <h4>Masukkan Nilai Uang yang Ingin di Konversi</h4>
+            <button type="button" id="k1">Konversi</button>
+        </form>
+    </div>
+    
+    <script>
+        let nilai = document.getElementById("n1");
+        let valas = document.getElementById("v1");
+        let button = document.getElementById("k1");
+
+        button.addEventListener("click", function() {
+            let total = document.getElementById("rupiah");
+            total.value = "Rp. " + (valas.value * nilai.value).toFixed(3);
+        ;});
+    </script>
+</body>
+</html>
